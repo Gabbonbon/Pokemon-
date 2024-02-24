@@ -3,7 +3,7 @@ This is my simple text based pokemon game based in generation 1. Using the rando
 I know the code is spagetti but this is a basic version. 
 
 
-
+This is the original version, Gabbonbon is the creator. If you would like to use this program in commercial products please contact me.
 
 
 
