@@ -11,7 +11,19 @@ catch_system = ""
 pokedex = []
 old_amber = 0
 badges = 0
-
+box_ans = ""
+pokemon_put_into_box = []
+def pc_box():
+   print("The boox is capable of putting already caught pokemon into a box just in case. You can also easily take them out if you want to train or use them.") 
+   box_ans = input("Would you like to put a pokemon into the box")
+   if box_ans == "yes":
+         pokemon_put_into_box = input("What pokemon would you like to put into the box")
+         pokemon_put_into_box = pokemon_put_into_box
+         print ("You have added" +  str(pokemon_put_into_box))
+         pokemon_put_into_box.append(pokemon_put_into_box)
+   else:
+      
+      print("You do not put a pokemoon into the box")
 if money < 1000:
    print("You don't have enough money, you cannot spend")
    money = money - 1000
@@ -275,6 +287,7 @@ def pokemon_center():
   else:
     print("You don't heal your pokemon")
     print(hp)
+    pc_box()
 pokemon_center()
 print("You exit the pokemon center and head to the pokemart")
 print("Clerk: Hey! You came from PALLET TOWN? You know PROF.OAK, right? His order came in. Will you take it to him?")
@@ -659,6 +672,10 @@ else:
             print(money)
             hp = hp - 30
             print("You lost 30 hp")
+print("You have reached the end of Route 3 and enter Mt.MOON")
+print(pokedex + "pokemon entries in your pokedex file")
+print(party_size + "Pokemon in your party")
+
 
 
 
