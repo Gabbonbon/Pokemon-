@@ -89,6 +89,7 @@ def battle():
       xp = xp + 10
   if player_choice == "no":
      print("Game over")
+     exit()
 
 print("In this text based pokemon game using the pokemon yellow version script with some minor changes and improvements the battle system is way more different then what pokemon games have used before, this is to simpillify and have the game be more fun and enjoyable for the player. ")
 
@@ -182,10 +183,10 @@ else:
   print(rival_name + ": Yeah! Am I great or what?")
   hp = hp - 30
   print("You lost 30 hp")
-print(rival_name + ": Okay! I'll make my POKEMON fight to toughen it up!" + player_name + "! Gramps! Smell you later!")
+print(rival_name + ": Okay! I'll make my POKEMON fight to toughen it up! " + player_name + "! Gramps! Smell you later!")
 print(rival_name + "takes his leave from the labatory and town.")
 print("As you leave Oak says...")
-print("Oak:" + player_name + "train your pokemon to be the best they can be! by fighting.")
+print("Oak: " + player_name + "train your pokemon to be the best they can be! by fighting.")
 print("You go back home to say goodbye to your mother.")
 print("Mother:" + player_name + "You should take a quick rest.Oh good! You and your POKEMON are looking great! Take care now!")
 print("You go to route one to start your journey by catching pokemon. ")
@@ -675,109 +676,6 @@ else:
 print("You have reached the end of Route 3 and enter Mt.MOON")
 print(pokedex + "pokemon entries in your pokedex file")
 print(party_size + "Pokemon in your party")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+qqqqq = 2
+for i in range(qqqqq):
+   print("hello")
