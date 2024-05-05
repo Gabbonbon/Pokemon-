@@ -12,18 +12,20 @@ pokedex = []
 old_amber = 0
 badges = 0
 box_ans = ""
-pokemon_put_into_box = []
+pokemon_put_into_box = ""
+pokemon_put_into_a_box_list = []
 def pc_box():
-   print("The boox is capable of putting already caught pokemon into a box just in case. You can also easily take them out if you want to train or use them.") 
+   print("The box is capable of putting already caught pokemon into a box just in case. You can also easily take them out if you want to train or use them.") 
    box_ans = input("Would you like to put a pokemon into the box")
    if box_ans == "yes":
          pokemon_put_into_box = input("What pokemon would you like to put into the box")
          pokemon_put_into_box = pokemon_put_into_box
-         print ("You have added" +  str(pokemon_put_into_box))
-         pokemon_put_into_box.append(pokemon_put_into_box)
+         print ("You have added " +  str(pokemon_put_into_box))
+         pokemon_put_into_a_box_list.append(pokemon_put_into_box)
+         print(pokemon_put_into_a_box_list + "Has been added to the box list.")
    else:
-      
-      print("You do not put a pokemoon into the box")
+      print("You do not put a pokemon into the box")
+   
 if money < 1000:
    print("You don't have enough money, you cannot spend")
    money = money - 1000
@@ -61,7 +63,7 @@ def gym_1():
       else:
          print("You Lost!")
          exit()
-def potion():
+def potion_1():
   potion_use = input("Do you use a potion?")
   if potion_use == "yes":
      print("You use a potion!")
@@ -89,7 +91,6 @@ def battle():
       xp = xp + 10
   if player_choice == "no":
      print("Game over")
-     exit()
 
 print("In this text based pokemon game using the pokemon yellow version script with some minor changes and improvements the battle system is way more different then what pokemon games have used before, this is to simpillify and have the game be more fun and enjoyable for the player. ")
 
@@ -107,22 +108,22 @@ else:
     print("A image of a girl appears")
 
 player_name = input("Oak: First, what is your name?")
-print("So your name is " + player_name)
+print(f"So your name is {player_name}")
 print("An image of a different boy appears")
 print("Oak: This is my grandson. He's been your rival since you were a baby. ")
 
 rival_name = input("...Erm, what is his name again?")
 
-print("Oak: Right! So his name is " + rival_name)
+print(f"Oak: Right! So his name is {rival_name}")
 print(rival_name + "'s image appears")
 
-print("Oak:" + player_name + "! Your very own POKEMON legend is about to unfold! A world of dreams and adventures with POKEMON awaits! Let's go!")
+print(f"Oak: {player_name} ! Your very own POKEMON legend is about to unfold! A world of dreams and adventures with POKEMON awaits! Let's go!")
 
 print("You awake in your home.")
-print("Mother: " + player_name + "! Wake up! Time to go to the lab! Go to "+ rival_name + "'s home first to pick him up, today is the day you get your first POKEMON")
-print("You go to "+ rival_name + "'s home")
-print("You see "+ rival_name + "'s sister and a map")
-print(rival_name + "sister: Hi, my big bro is out at Grandpa's lab.")
+print(f"Mother: {player_name} ! Wake up! Time to go to the lab! Go to {rival_name}'s home first to pick him up, today is the day you get your first POKEMON")
+print(f"You go to + {rival_name}  's home")
+print(f"You see {rival_name}'s sister and a map")
+print(rival_name + "'s sister: Hi, my big bro is out at Grandpa's lab.")
 map_1 = input("Do you want to take the map?")
 if map_1 == "yes":
   print("It's a big map! This is useful! You take the map")
@@ -140,8 +141,8 @@ print(rival_name + "Gramps! I'm fed up with waiting!")
 print("Oak: Let me think... Oh, that's right, I told you to come! Just wait!")
 print("Here, There are 3 POKEMON here! Haha! They are inside the POKE BALLS. When I was young, I was a serious POKEMON trainer. In my old age, I have only 3 left, but you can have one! Choose!")
 print(rival_name + "Hey! Gramps! What about me?")
-print("Oak: Be patient! " + rival_name + "! you can have one too!")
-print("Now" + player_name + "! It's time to choose your first POKEMON!")
+print(f"Oak: Be patient! {rival_name}! you can have one too!")
+print(f"Now + {player_name}! It's time to choose your first POKEMON!")
 print("The three available Pokemon are Bulbasaur, Charmander, and Squirtle.")
 
 
@@ -170,7 +171,7 @@ print("Oak: If a wild POKEMON appears, your POKEMON can fight against it!")
 print(rival_name + ": My POKEMON looks a lot stronger.")
 print("You look at the third pokeball")
 print("3rd Ball: That's PROF.OAK's last POKEMON!")
-print( rival_name + "Let's check out our POKEMON! Come on, I'll take you on in our first pokemon battle!")
+print(rival_name + "Let's check out our POKEMON! Come on, I'll take you on in our first pokemon battle!")
 battle()
 battle_result = input("Did you win?")
 if battle_result == "yes":
@@ -183,12 +184,12 @@ else:
   print(rival_name + ": Yeah! Am I great or what?")
   hp = hp - 30
   print("You lost 30 hp")
-print(rival_name + ": Okay! I'll make my POKEMON fight to toughen it up! " + player_name + "! Gramps! Smell you later!")
+print(rival_name + f": Okay! I'll make my POKEMON fight to toughen it up! {player_name}! Gramps! Smell you later!")
 print(rival_name + "takes his leave from the labatory and town.")
 print("As you leave Oak says...")
-print("Oak: " + player_name + "train your pokemon to be the best they can be! by fighting.")
+print(f"Oak: {player_name} train your pokemon to be the best they can be! by fighting.")
 print("You go back home to say goodbye to your mother.")
-print("Mother:" + player_name + "You should take a quick rest.Oh good! You and your POKEMON are looking great! Take care now!")
+print(f"Mother: {player_name} You should take a quick rest.Oh good! You and your POKEMON are looking great! Take care now!")
 print("You go to route one to start your journey by catching pokemon. ")
 print("You see tall grass to catch a pokemon and a pokemart")
 
@@ -208,7 +209,7 @@ if place_1 == "pokemart":
     print("You spend 100 pokedollars on a potion")
     money = money - 100
     print(money)
-    potion = potion = 1
+    potion = potion + 1
     print("You exit the pokemart and head to Viridian city")
   elif pokemart_1 == "pokeball":
     print("You spend 100 pokedollars on a pokeball")
@@ -296,13 +297,13 @@ print("He gives you Oak's parcel")
 print("Clerk: Okay! Say hi to PROF.OAK for me!")
 print("To make sure the parcel gets delivered quickly,you go the faster route back to pallet town that the nice customer told you about")
 print("You enter Oak's lab")
-print("Oak: Oh! " + player_name + "How is my old POKEMON? Well, it seems to like you a lot. You must be talented as a POKEMON trainer! What? You have something for me?")
+print(f"Oak: Oh! {player_name} How is my old POKEMON? Well, it seems to like you a lot. You must be talented as a POKEMON trainer! What? You have something for me?")
 print("You give the parcel to Oak")
 print("Oak: Ah! this is the custom pokeball I ordered thank you")
 print(rival_name + "enters the building.")
 print(rival_name + "Gramps! What did you call me for?")
 print("Oh right! I have a request of you two. On the desk there is my invention, POKEDEX! It automatically records data on POKEMON you've seen or caught! It's a hi-tech encyclopedia!")
-print("You and " + rival_name + " obtain the pokedex")
+print(f"You and  {rival_name} obtain the pokedex")
 print("You look in the pokedex")
 print(pokedex)
 print("Oak: To make a complete guide on all the POKEMON in the world... That was my dream! But, I'm too old! I can't do it! So, I want you two to fulfill my dream for me! Get moving, you two! This is a great undertaking in POKEMON history!")
@@ -350,7 +351,7 @@ else:
    print("You got 500 pokedollars")
    print(money)
    print("Use the music to guide you")
-potion()
+potion_1()
 print("You see a Caterpie and a Rattata")
 route_2_catch = input("Do you want to try the rattata or caterpie first?")
 if route_2_catch == "rattata":
@@ -565,7 +566,7 @@ elif battle_result == "no":
    hp = hp - 30
    print("You lost 30 hp")
    print(hp + "Hp")
-potion()  
+potion_1()  
 print("Youngster: Hi! I like shorts! They're comfy and easy to wear!")
 battle()
 if battle_result == "yes":
@@ -675,7 +676,5 @@ else:
             print("You lost 30 hp")
 print("You have reached the end of Route 3 and enter Mt.MOON")
 print(pokedex + "pokemon entries in your pokedex file")
-print(party_size + "Pokemon in your party")
-qqqqq = 2
-for i in range(qqqqq):
-   print("hello")
+print(party_size + "Pokemon in your party")                       
+print("Signpost: Beware! ZUBAT is a blood sucker!")
